@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'glith-globlin';
+  src: url('/assets/fonts/GlitchGoblin.ttf'), format('ttf');
+}
+
+@font-face {
+  font-family: 'broken-glass';
+  src: url('/assets/fonts/BrokenGlass.otf'), format('otf');
+}
+
+@font-face {
+  font-family: 'zrnic';
+  src: url('/assets/fonts/zrnic-rg.otf'), format('otf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

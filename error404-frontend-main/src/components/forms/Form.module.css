@@ -1,0 +1,131 @@
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: #00008b;
+}
+
+.form::after {
+    content: '';
+    position: absolute;
+    left: -.9rem;
+    bottom: -.9rem;
+    width: calc(100% + 1.8rem);
+    height: calc(100% + 1.8rem);
+    z-index: -1;
+    clip-path: polygon(0 6%, 6% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+    background: linear-gradient(45deg, rgb(0, 0, 139), rgb(75, 0, 130), rgb(0, 128, 0), rgb(255, 69, 0), rgb(139, 0, 0), rgb(0, 0, 0));
+    background-size: 300% 300%;
+    animation: gradient;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.form h2 {
+    font-family: 'zrnic', serif;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.inputDiv {
+    width: 90%;
+    position: relative;
+}
+
+.inputDiv label {
+    padding: 0 .5rem;
+    position: absolute;
+    top: 9%;
+    left: 3%;
+    font-family: 'zrnic', serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    pointer-events: none;
+    background-color: transparent;
+    transition: .3s;
+    text-align: center;
+}
+
+.inputDiv input {
+    width: 100%;
+    height: 1.8rem;
+    outline: none;
+    border: none;
+    padding-left: 5%;
+    font-size: 15px;
+    font-family: 'zrnic', serif;
+    font-weight: bold;
+}
+
+.inputDiv:has(input:focus) label {
+    transform: translateY(-1.1rem);
+}
+
+.btnLogin {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnLogin p {
+    font-family: 'zrnic', serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btnLogin span {
+    color: #333333;
+    font-size: 19px;
+    font-family: 'zrnic', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btnLogin button {
+    margin-top: 2%;
+    padding: .15rem 1.5rem;
+    font-family: 'zrnic', serif;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: #8b0000;
+    border: 5px solid #000;
+    transition: .1s;
+}
+
+.btnLogin button:hover {
+    transform: scale(1.1);
+}
+
+.btnLogin button:active {
+    transform: scale(1);
+    background-color: #ffd700;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
